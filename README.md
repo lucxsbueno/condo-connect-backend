@@ -6,7 +6,12 @@
 Authorization: Bearer <token>
 ```
 
-### Erro
+## API
+
+<details>
+<summary>Tipos de retorno</summary>
+
+**Erro**:
 
 ```json
 {
@@ -14,7 +19,7 @@ Authorization: Bearer <token>
 }
 ```
 
-### Sucesso
+**Sucesso**:
 
 ```json
 {
@@ -22,7 +27,7 @@ Authorization: Bearer <token>
 }
 ```
 
-### Informação
+**Informativo**:
 
 ```json
 {
@@ -30,9 +35,12 @@ Authorization: Bearer <token>
 }
 ```
 
-## API
+</details>
 
-### Cadastro de Usuário
+### Usuário
+
+<details>
+<summary>Cadastro de Usuário</summary>
 
 **Endpoint**: `/users/signup`  
 **Método**: `POST`  
@@ -73,7 +81,10 @@ Authorization: Bearer <token>
 }
 ```
 
-### Login de Usuário
+</details>
+
+<details>
+<summary>Login de Usuário</summary>
 
 **Endpoint**: `/users/signin`  
 **Método**: `POST`  
@@ -107,7 +118,10 @@ Authorization: Bearer <token>
 }
 ```
 
-### Listar Usuários
+</details>
+
+<details>
+<summary>Listar Usuários</summary>
 
 **Endpoint**: `/users/`  
 **Método**: `GET`  
@@ -145,7 +159,10 @@ Nenhuma requisição específica necessária.
 }
 ```
 
-### Buscar Usuário por ID
+</details>
+
+<details>
+<summary>Buscar usuário por id</summary>
 
 **Endpoint**: `/users/:id`  
 **Search Query**: `?q=<name,email,role>`  
@@ -177,3 +194,5 @@ Nenhuma requisição específica necessária.
   "message": "Nenhum usuário encontrado."
 }
 ```
+
+</details>

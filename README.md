@@ -40,7 +40,7 @@ Authorization: Bearer <token>
 ### Usuário
 
 <details>
-<summary>Cadastro de Usuário</summary>
+<summary>Cadastro de usuário</summary>
 
 **Endpoint**: `/users/signup`  
 **Método**: `POST`  
@@ -84,7 +84,7 @@ Authorization: Bearer <token>
 </details>
 
 <details>
-<summary>Login de Usuário</summary>
+<summary>Login de usuário</summary>
 
 **Endpoint**: `/users/signin`  
 **Método**: `POST`  
@@ -121,7 +121,7 @@ Authorization: Bearer <token>
 </details>
 
 <details>
-<summary>Listar Usuários</summary>
+<summary>Listar usuários</summary>
 
 **Endpoint**: `/users/`  
 **Método**: `GET`  

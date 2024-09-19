@@ -62,9 +62,8 @@ const findAllUsers = async (req, res) => {
 
     return res.status(200).json(users);
   } catch (error) {
-
     return res.status(500).json({
-      error: "Ocorreu um erro. Não foi possível processar sua solicitação."
+      error: "Ocorreu um erro. Não foi possível processar sua solicitação.",
     });
   }
 };
@@ -138,7 +137,7 @@ const updateUserById = async (req, res) => {
     });
   } catch (error) {
     return res.status(500).json({
-      error: "Ocorreu um erro. Não foi possível processar sua solicitação."
+      error: "Ocorreu um erro. Não foi possível processar sua solicitação.",
     });
   }
 };
@@ -150,7 +149,7 @@ const signin = async (req, res) => {
     //if there are no records
     if (!user) {
       return res.status(400).json({
-        error: "E-mail ou senha inválidos! Tente novamente."
+        error: "E-mail ou senha inválidos! Tente novamente.",
       });
     }
 
@@ -190,7 +189,7 @@ const signin = async (req, res) => {
     console.log(error);
 
     return res.status(500).json({
-      error: "Ocorreu um erro. Não foi possível processar sua solicitação."
+      error: "Ocorreu um erro. Não foi possível processar sua solicitação.",
     });
   }
 };

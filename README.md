@@ -34,7 +34,7 @@ Authorization: Bearer <token>
 
 ### Cadastro de Usuário
 
-**Endpoint**: `/signup`  
+**Endpoint**: `/users/signup`  
 **Método**: `POST`  
 **Descrição**: Cria um novo usuário.
 
@@ -75,7 +75,7 @@ Authorization: Bearer <token>
 
 ### Login de Usuário
 
-**Endpoint**: `/signin`  
+**Endpoint**: `/users/signin`  
 **Método**: `POST`  
 **Descrição**: Autentica um usuário com e-mail e senha, retornando um token JWT.
 
@@ -109,7 +109,7 @@ Authorization: Bearer <token>
 
 ### Listar Usuários
 
-**Endpoint**: `/`  
+**Endpoint**: `/users/`  
 **Método**: `GET`  
 **Autorização**: `Bearer Token`.  
 **Descrição**: Retorna uma lista de todos os usuários.
@@ -147,14 +147,15 @@ Nenhuma requisição específica necessária.
 
 ### Buscar Usuário por ID
 
-**Endpoint**: `/:id`  
+**Endpoint**: `/users/:id`  
+**Search Query**: `?q=<name,email,role>`  
 **Método**: `GET`  
 **Autorização**: `Bearer Token`.  
 **Descrição**: Retorna um usuário específico com base no ID.
 
 **Requisição**:
 
-`GET /users/1`
+Nenhuma requisição específica necessária.
 
 **Respostas**:
 

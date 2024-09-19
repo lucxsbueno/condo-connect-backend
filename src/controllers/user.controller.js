@@ -62,12 +62,9 @@ const findAllUsers = async (req, res) => {
 
     return res.status(200).json(users);
   } catch (error) {
-    console.log(error);
 
     return res.status(500).json({
-      error: true,
-      message: "Ocorreu um erro. Não foi possível processar sua solicitação.",
-      stack: error,
+      error: "Ocorreu um erro. Não foi possível processar sua solicitação."
     });
   }
 };
@@ -130,20 +127,18 @@ const updateUserById = async (req, res) => {
 
     if (!user) {
       return res.status(400).json({
-        message: "Nenhum usuário encontrado.",
+        info: "Nenhum usuário encontrado.",
       });
     }
 
     await updateUser(userId, userData);
 
     return res.status(200).json({
-      message: "Usuário atualizado com sucesso!",
+      success: "Usuário atualizado com sucesso!",
     });
   } catch (error) {
     return res.status(500).json({
-      error: true,
-      message: "Ocorreu um erro. Não foi possível processar sua solicitação.",
-      stack: error,
+      error: "Ocorreu um erro. Não foi possível processar sua solicitação."
     });
   }
 };
@@ -155,9 +150,7 @@ const signin = async (req, res) => {
     //if there are no records
     if (!user) {
       return res.status(400).json({
-        error: true,
-        status: 400,
-        message: "E-mail ou senha inválidos! Tente novamente.",
+        error: "E-mail ou senha inválidos! Tente novamente."
       });
     }
 
@@ -184,26 +177,20 @@ const signin = async (req, res) => {
         }
 
         return res.status(202).json({
-          error: false,
-          status: 202,
-          message: "Login efetuado com sucesso!",
+          success: "Login efetuado com sucesso!",
           token: token,
         });
       });
     } else {
       return res.status(400).json({
-        error: true,
-        status: 400,
-        message: "E-mail ou senha inválidos! Tente novamente.",
+        error: "E-mail ou senha inválidos! Tente novamente.",
       });
     }
   } catch (error) {
     console.log(error);
 
     return res.status(500).json({
-      error: true,
-      message: "Ocorreu um erro. Não foi possível processar sua solicitação.",
-      stack: error,
+      error: "Ocorreu um erro. Não foi possível processar sua solicitação."
     });
   }
 };

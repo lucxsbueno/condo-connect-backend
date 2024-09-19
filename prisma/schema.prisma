@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               Int            @id @default(autoincrement())
+  name             String
+  email            String         @unique
+  password         String
+  avatar           String         @default("https://api.dicebear.com/9.x/dylan/svg?skinColor=ffd6c0")
+  role             UserRole // Enum para diferentes perfis (morador, síndico, administrador)
+  apartments       Apartment[] // Moradores podem ter um ou mais apartamentos
+  messagesSent     Message[]      @relation("MessageSender") // Mensagens enviadas
+  messagesReceived Message[]      @relation("MessageReceiver") // Mensagens recebidas
+  complaints       Complaint[] // Reclamações registradas
+  votes            Vote[] // Participações em votações
+  reservations     Reservation[] // Reservas de áreas comuns
+  ForumPost        ForumPost[]
+  Comment          Comment[]
+  Notification     Notification[]
+}
+
+model Apartment {
+  id       Int    @id @default(autoincrement())
+  number   String
+  building String
+  owner    User   @relation(fields: [ownerId], references: [id])
+  ownerId  Int
+}
+
+model AreaCommon {
+  id           Int           @id @default(autoincrement())
+  name         String
+  description  String
+  reservations Reservation[] // Reservas para essa área comum
+}
+
+model Reservation {
+  id           Int        @id @default(autoincrement())
+  areaCommon   AreaCommon @relation(fields: [areaCommonId], references: [id])
+  areaCommonId Int
+  user         User       @relation(fields: [userId], references: [id])
+  userId       Int
+  startTime    DateTime
+  endTime      DateTime
+  createdAt    DateTime   @default(now())
+}
+
+model ForumPost {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String
+  createdAt DateTime  @default(now())
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  Int
+  comments  Comment[] // Comentários no post
+}
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  content   String
+  createdAt DateTime  @default(now())
+  post      ForumPost @relation(fields: [postId], references: [id])
+  postId    Int
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  Int
+}
+
+model Complaint {
+  id          Int             @id @default(autoincrement())
+  description String
+  status      ComplaintStatus // Enum para status (pendente, em andamento, resolvida)
+  createdAt   DateTime        @default(now())
+  resolvedAt  DateTime?
+  user        User            @relation(fields: [userId], references: [id])
+  userId      Int
+}
+
+model Vote {
+  id        Int      @id @default(autoincrement())
+  topic     String
+  option    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+}
+
+model Notification {
+  id        Int              @id @default(autoincrement())
+  content   String
+  type      NotificationType // Enum para diferentes tipos de notificações
+  createdAt DateTime         @default(now())
+  user      User             @relation(fields: [userId], references: [id])
+  userId    Int
+}
+
+model Message {
+  id         Int      @id @default(autoincrement())
+  content    String
+  createdAt  DateTime @default(now())
+  sender     User     @relation(name: "MessageSender", fields: [senderId], references: [id])
+  senderId   Int
+  receiver   User     @relation(name: "MessageReceiver", fields: [receiverId], references: [id])
+  receiverId Int
+}
+
+enum UserRole {
+  RESIDENT
+  MANAGER
+  ADMIN
+}
+
+enum ComplaintStatus {
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+}
+
+enum NotificationType {
+  ANNOUNCEMENT
+  REMINDER
+  ALERT
+}

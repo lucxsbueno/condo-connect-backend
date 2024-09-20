@@ -277,7 +277,39 @@ DELETE /users/1
  </tr>
  <tr>
   <td>Endpoint</td>
-  <td>/users/</td>
+  <td><code>/users/</code></td>
+ </tr>
+ <tr>
+  <td>Method</td>
+  <td><b>POST</b></td>
+ </tr>
+ <tr>
+  <td>Description</td>
+  <td>Create a new user</td>
+ </tr>
+ <tr>
+  <td>Authorization</td>
+  <td>Bearer &lt;jwt_token&gt;</td>
+ </tr>
+ <tr>
+  <td rowspan="8">Request Body</td>
+  <td rowspan="10">
+  <code>{<br>
+    "email": "user@example.com",
+    "password": "yourpassword"
+    "name": "Full Name",
+    "role": "RESIDENT, MANAGER or ADMIN"<br>
+  }</code></td>
+ </tr>
+</table>
+
+<table width="100%">
+ <tr>
+  <th  colspan="3">Crate a new user</th>
+ </tr>
+ <tr>
+  <td>Endpoint</td>
+  <td><code>/users/</code></td>
  </tr>
  <tr>
   <td>Method</td>

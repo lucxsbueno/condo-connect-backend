@@ -295,15 +295,12 @@ DELETE /users/1
   <td rowspan="8">Request Body</td>
   <td rowspan="10">
   <code>
-  ```json <br>
-      {<br>
+  {<br>
     "email": "user@example.com",
     "password": "yourpassword"
     "name": "Full Name",
     "role": "RESIDENT, MANAGER or ADMIN"
-  <br>
   }<br>
-  ```
   </code></td>
  </tr>
 </table>

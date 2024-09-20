@@ -292,16 +292,14 @@ DELETE /users/1
   <td>`Bearer &lt;jwt_token&gt;`</td>
  </tr>
  <tr>
-  <td>Request Body</td>
-  <td rowspan="8">
-  ```json
+  <td rowspan="8">Request Body</td>
+  <td rowspan="8">```json
   {
     "email": "user@example.com",
     "password": "yourpassword"
     "name": "Full Name",
     "role": "RESIDENT, MANAGER or ADMIN"
   }
-  ```
-  </td>
+  ```</td>
  </tr>
 </table>

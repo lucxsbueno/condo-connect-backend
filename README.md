@@ -168,7 +168,7 @@ Nenhuma requisição específica necessária.
 **Search Query**: `?q=<name,email,role>`  
 **Método**: `GET`  
 **Autorização**: `Bearer Token`.  
-**Descrição**: Retorna um usuário específico com base no ID.
+**Descrição**: Retorna um usuário específico com base no id.
 
 **Requisição**:
 
@@ -183,7 +183,79 @@ Nenhuma requisição específica necessária.
   "id": 1,
   "email": "user1@example.com",
   "name": "User 1",
-  "role": "role"
+  "role": "RESIDENT, MANAGER or ADMIN"
+}
+```
+
+**400**: Usuário não encontrado.
+
+```json
+{
+  "message": "Nenhum usuário encontrado."
+}
+```
+
+</details>
+
+<details>
+<summary>Excluir usuário por id</summary>
+
+**Endpoint**: `/users/:id`
+**Método**: `DELETE`  
+**Autorização**: `Bearer Token`.  
+**Descrição**: Exclui um usuário específico com base no id.
+
+**Requisição**:
+
+DELETE /users/1
+
+**Respostas**:
+
+**200**: Usuário excluído com sucesso.
+
+```json
+{
+  "message": "Usuário excluído com sucesso!"
+}
+```
+
+**400**: Usuário não encontrado.
+
+```json
+{
+  "message": "Nenhum usuário encontrado."
+}
+```
+
+</details>
+
+</details>
+
+<details>
+<summary>Atualizar Usuário por id</summary>
+
+**Endpoint**: `/users/:id`
+**Método**: `PUT`  
+**Autorização**: `Bearer Token`.  
+**Descrição**: Atualiza os dados de um usuário com base no id.
+
+**Requisição**:
+
+```json
+{
+  "email": "updated@example.com",
+  "name": "Updated Name",
+  "role": "RESIDENT, MANAGER or ADMIN"
+}
+```
+
+**Respostas**:
+
+**200**: Usuário atualizado com sucesso.
+
+```json
+{
+  "message": "Usuário atualizado com sucesso!"
 }
 ```
 

@@ -271,23 +271,28 @@ DELETE /users/1
 
 </details>
 
-<table>
-  <tr>
-    <th>Coluna 1</th>
-    <th>Coluna 2</th>
-    <th>Coluna 3</th>
-  </tr>
-  <tr>
-    <td>Dado 1</td>
-    <td>Dado 2</td>
-    <td>Dado 3</td>
-  </tr>
-  <tr>
-    <td colspan="3">Célula mesclada em três colunas</td>
-  </tr>
-  <tr>
-    <td>Dado 4</td>
-    <td>Dado 5</td>
-    <td>Dado 6</td>
-  </tr>
+<table width="100%">
+ <tr>
+  <th  colspan="3">Crate new user</th>
+ </tr>
+ <tr>
+  <td>Endpoint</td>
+  <td>`/users/`</td>
+ </tr>
+ <tr>
+  <td>Method</td>
+  <td>**POST**</td>
+ </tr>
+ <tr>
+  <td>Description</td>
+  <td>Create a new user</td>
+ </tr>
+ <tr>
+  <td>Authorization</td>
+  <td>`Bearer &lt;jwt_token&gt;`</td>
+ </tr>
+ <tr>
+  <td>Request Body</td>
+  <td rowspan="8">```json{"email":"user@example.com","password":"yourpassword","name":"Full Name","role":  "RESIDENT, MANAGER or ADMIN"}```</td>
+ </tr>
 </table>

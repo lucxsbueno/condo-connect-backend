@@ -46,7 +46,7 @@ Authorization: Bearer <token>
 **Método**: `POST`  
 **Descrição**: Cria um novo usuário.
 
-**Requisição**:
+**Corpo da Requisição**:
 
 ```json
 {
@@ -90,7 +90,7 @@ Authorization: Bearer <token>
 **Método**: `POST`  
 **Descrição**: Autentica um usuário com e-mail e senha, retornando um token JWT.
 
-**Requisição**:
+**Corpo da Requisição**:
 
 ```json
 {
@@ -131,9 +131,9 @@ Listar usuários
 **Autorização**: `Bearer Token`.  
 **Descrição**: Retorna uma lista de todos os usuários.
 
-**Requisição**:
+**Corpo da Requisição**:
 
-Nenhuma requisição específica necessária.
+Nenhuma Corpo da Requisição específica necessária.
 
 **Respostas**:
 
@@ -172,9 +172,9 @@ Nenhuma requisição específica necessária.
 **Autorização**: `Bearer Token`.  
 **Descrição**: Retorna um usuário específico com base no id.
 
-**Requisição**:
+**Corpo da Requisição**:
 
-Nenhuma requisição específica necessária.
+Nenhuma Corpo da Requisição específica necessária.
 
 **Respostas**:
 
@@ -202,12 +202,12 @@ Nenhuma requisição específica necessária.
 <details>
 <summary style="font-size:18px">Excluir usuário por id</summary>
 
-**Endpoint**: `/users/:id`
+**Endpoint**: `/users/:id`  
 **Método**: `DELETE`  
 **Autorização**: `Bearer Token`.  
 **Descrição**: Exclui um usuário específico com base no id.
 
-**Requisição**:
+**Corpo da Requisição**:
 
 DELETE /users/1
 
@@ -236,12 +236,12 @@ DELETE /users/1
 <details>
 <summary style="font-size:18px">Atualizar Usuário por id</summary>
 
-**Endpoint**: `/users/:id`
+**Endpoint**: `/users/:id`  
 **Método**: `PUT`  
 **Autorização**: `Bearer Token`.  
 **Descrição**: Atualiza os dados de um usuário com base no id.
 
-**Requisição**:
+**Corpo da Requisição**:
 
 ```json
 {
@@ -270,3 +270,16 @@ DELETE /users/1
 ```
 
 </details>
+
+| Endpoint     | `/users/signup`                      |   |   |   |
+|--------------|--------------------------------------|---|---|---|
+| Method       | POST                                 |   |   |   |
+| Description  | Cria um novo usuário                 |   |   |   |
+| Request Body | ```json                              |   |   |   |
+|              | {                                    |   |   |   |
+|              | "email": "<user@example.com>",         |   |   |   |
+|              | "password": "yourpassword",          |   |   |   |
+|              | "name": "Full Name",                 |   |   |   |
+|              | "role": "RESIDENT, MANAGER or ADMIN" |   |   |   |
+|              | }                                    |   |   |   |
+|              | ```                                  |   |   |   |

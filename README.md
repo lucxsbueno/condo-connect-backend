@@ -294,14 +294,17 @@ DELETE /users/1
  <tr>
   <td rowspan="8">Request Body</td>
   <td rowspan="10">
-  ```json
-  {
+  <code>
+  ```json <br>
+      {<br>
     "email": "user@example.com",
     "password": "yourpassword"
     "name": "Full Name",
     "role": "RESIDENT, MANAGER or ADMIN"
-  }
-  ```</td>
+  <br>
+  }<br>
+  ```
+  </code></td>
  </tr>
 </table>
 
@@ -311,4 +314,4 @@ DELETE /users/1
 | **Method**       | **POST**                                                                                                                                              |
 | **Description**  | Create a new user                                                                                                                                     |
 | **Authorization**| Bearer <jwt_token>                                                                                                                                    |
-| **Request Body** | ![Request Body](https://github.com/lucxsbueno/condo-connect-backend/blob/main/src/assets/create-a-new-user-json2.svg)                                  |
+| **Request Body** | ![Request Body](https://github.com/lucxsbueno/condo-connect-backend/blob/main/src/assets/create-a-new-user-json.svg)                                  |

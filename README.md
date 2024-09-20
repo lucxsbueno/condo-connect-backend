@@ -298,8 +298,8 @@ DELETE /users/1
     "email": "user@example.com",
     "password": "yourpassword"
     "name": "Full Name",
-    "role": "RESIDENT, MANAGER or ADMIN"<br>
-  }</code></td>
+    "role": "RESIDENT, MANAGER or ADMIN"
+}</code></td>
  </tr>
 </table>
 

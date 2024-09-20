@@ -1,6 +1,6 @@
 ### Autenticação
 
-> Esta API utiliza JWT para autenticação. Após o login bem-sucedido, o cliente deve enviar o token JWT no header Authorization para as rotas protegidas.
+`Nota:` Esta API utiliza JWT para autenticação. Após o login bem-sucedido, o cliente deve enviar o token JWT no header Authorization para as rotas protegidas.
 
 ```http
 Authorization: Bearer <token>

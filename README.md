@@ -311,4 +311,4 @@ DELETE /users/1
 | **Method**       | **POST**                                                                                                                                              |
 | **Description**  | Create a new user                                                                                                                                     |
 | **Authorization**| Bearer <jwt_token>                                                                                                                                    |
-| **Request Body** | ![Request Body](https://link-da-imagem.com/exemplo.png)                                                                                                |
+| **Request Body** | ![Request Body](https://github.com/lucxsbueno/condo-connect-backend/blob/main/src/assets/create-a-new-user-json.svg)                                  |

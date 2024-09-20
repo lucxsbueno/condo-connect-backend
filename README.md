@@ -305,10 +305,10 @@ DELETE /users/1
  </tr>
 </table>
 
-| Crate a new user                                                                                                                                        |  |
+| Crate a new user                                                                                                                                       |  |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Endpoint                         | `/users/`                                                                                                                                                                                                                                                                                                      |
 | Method                           | **POST**                                                                                                                                                                                                                                                                                                       |
 | Description                      | Create a new user                                                                                                                                                                                                                                                                                              |
-| Authorization                    | Bearer &lt;jwt_token&gt;                                                                                                                                                                                                                                                                                       |
-| Request Body                     | ```json   {     "email": "user@example.com",     "password": "yourpassword"     "name": "Full Name",     "role": "RESIDENT, MANAGER or ADMIN"   }```
+| Authorization                    | Bearer <jwt_token>                                                                                                                                                                                                                                                                                             |
+| Request Body                     | ```json   {   "email": "user@example.com",   "password": "yourpassword",   "name": "Full Name",   "role": "RESIDENT, MANAGER or ADMIN"   }```                                              |

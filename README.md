@@ -299,8 +299,7 @@ DELETE /users/1
     "password": "yourpassword"
     "name": "Full Name",
     "role": "RESIDENT, MANAGER or ADMIN"<br>
-  }
-  </code></td>
+  }</code></td>
  </tr>
 </table>
 

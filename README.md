@@ -295,10 +295,10 @@ DELETE /users/1
   <td rowspan="8">Request Body</td>
   <td rowspan="10">
   <code>{<br>
-    "email": "user@example.com",
-    "password": "yourpassword"
-    "name": "Full Name",
-    "role": "RESIDENT, MANAGER or ADMIN"
+  "email": "user@example.com",
+  "password": "yourpassword"
+  "name": "Full Name",
+  "role": "RESIDENT, MANAGER or ADMIN"
 }</code></td>
  </tr>
 </table>

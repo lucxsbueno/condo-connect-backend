@@ -9,7 +9,7 @@ Authorization: Bearer <token>
 ## API
 
 <details>
-<summary>Tipos de retorno</summary>
+<summary style="font-size:18px">Tipos de retorno</summary>
 
 **Erro**:
 
@@ -40,7 +40,7 @@ Authorization: Bearer <token>
 ### Usuário
 
 <details>
-<summary>Cadastro de usuário</summary>
+<summary style="font-size:18px">Cadastro de usuário</summary>
 
 **Endpoint**: `/users/signup`  
 **Método**: `POST`  
@@ -84,7 +84,7 @@ Authorization: Bearer <token>
 </details>
 
 <details>
-<summary>Login de usuário</summary>
+<summary style="font-size:18px">Login de usuário</summary>
 
 **Endpoint**: `/users/signin`  
 **Método**: `POST`  
@@ -121,7 +121,9 @@ Authorization: Bearer <token>
 </details>
 
 <details>
-<summary>Listar usuários</summary>
+<summary style="font-size:18px">
+Listar usuários
+</summary>
 
 **Endpoint**: `/users/`  
 **Search Query**: `?q=<name,email,role>`  
@@ -163,7 +165,7 @@ Nenhuma requisição específica necessária.
 </details>
 
 <details>
-<summary>Buscar usuário por id</summary>
+<summary style="font-size:18px">Buscar usuário por id</summary>
 
 **Endpoint**: `/users/:id`  
 **Método**: `GET`  
@@ -198,7 +200,7 @@ Nenhuma requisição específica necessária.
 </details>
 
 <details>
-<summary>Excluir usuário por id</summary>
+<summary style="font-size:18px">Excluir usuário por id</summary>
 
 **Endpoint**: `/users/:id`
 **Método**: `DELETE`  
@@ -232,7 +234,7 @@ DELETE /users/1
 </details>
 
 <details>
-<summary>Atualizar Usuário por id</summary>
+<summary style="font-size:18px">Atualizar Usuário por id</summary>
 
 **Endpoint**: `/users/:id`
 **Método**: `PUT`  

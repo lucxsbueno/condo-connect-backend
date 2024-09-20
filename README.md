@@ -124,6 +124,7 @@ Authorization: Bearer <token>
 <summary>Listar usuários</summary>
 
 **Endpoint**: `/users/`  
+**Search Query**: `?q=<name,email,role>`  
 **Método**: `GET`  
 **Autorização**: `Bearer Token`.  
 **Descrição**: Retorna uma lista de todos os usuários.
@@ -165,7 +166,6 @@ Nenhuma requisição específica necessária.
 <summary>Buscar usuário por id</summary>
 
 **Endpoint**: `/users/:id`  
-**Search Query**: `?q=<name,email,role>`  
 **Método**: `GET`  
 **Autorização**: `Bearer Token`.  
 **Descrição**: Retorna um usuário específico com base no id.

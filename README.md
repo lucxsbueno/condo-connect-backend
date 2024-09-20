@@ -304,3 +304,11 @@ DELETE /users/1
   ```</td>
  </tr>
 </table>
+
+| Crate a new user                                                                                                                                        |  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Endpoint                         | `/users/`                                                                                                                                                                                                                                                                                                      |
+| Method                           | **POST**                                                                                                                                                                                                                                                                                                       |
+| Description                      | Create a new user                                                                                                                                                                                                                                                                                              |
+| Authorization                    | Bearer &lt;jwt_token&gt;                                                                                                                                                                                                                                                                                       |
+| Request Body                     | ```json   {     "email": "user@example.com",     "password": "yourpassword"     "name": "Full Name",     "role": "RESIDENT, MANAGER or ADMIN"   }```

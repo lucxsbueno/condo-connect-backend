@@ -273,15 +273,15 @@ DELETE /users/1
 
 <table width="100%">
  <tr>
-  <th  colspan="3">Crate new user</th>
+  <th  colspan="3">Crate a new user</th>
  </tr>
  <tr>
   <td>Endpoint</td>
-  <td>`/users/`</td>
+  <td>/users/</td>
  </tr>
  <tr>
   <td>Method</td>
-  <td>**POST**</td>
+  <td><b>POST</b></td>
  </tr>
  <tr>
   <td>Description</td>
@@ -289,11 +289,12 @@ DELETE /users/1
  </tr>
  <tr>
   <td>Authorization</td>
-  <td>`Bearer &lt;jwt_token&gt;`</td>
+  <td>Bearer &lt;jwt_token&gt;</td>
  </tr>
  <tr>
   <td rowspan="8">Request Body</td>
-  <td rowspan="8">```json
+  <td rowspan="10">
+  ```json
   {
     "email": "user@example.com",
     "password": "yourpassword"

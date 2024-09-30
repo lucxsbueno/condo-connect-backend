@@ -42,6 +42,12 @@ const getUserById = async (id) => {
         name: true,
         email: true,
         role: true,
+        condominiums: {
+          select: {
+            name: true,
+            address: true
+          }
+        }
       },
     });
 
@@ -76,7 +82,6 @@ const updateUser = async (userId, userData) => {
 
     return user;
   } catch (error) {
-    console.log(error);
     throw new Error("Ocorreu um erro ao excluir um registro.");
   }
 };

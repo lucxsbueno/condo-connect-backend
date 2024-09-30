@@ -186,8 +186,6 @@ const signin = async (req, res) => {
       });
     }
   } catch (error) {
-    console.log(error);
-
     return res.status(500).json({
       error: "Ocorreu um erro. Não foi possível processar sua solicitação.",
     });
